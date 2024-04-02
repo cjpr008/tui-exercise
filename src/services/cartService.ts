@@ -27,7 +27,6 @@ async function updateCart(userId: number, productId: number): Promise<CartConten
     }
     products = await fetchProducts();
     const productToAdd = products.find((product: Product) => product.id === productId);
-
     if (productToAdd !== undefined && !productExists(cartByUserId.content, productId)) {
       cartByUserId.content.productList.push(productToAdd);
       cartByUserId.content.grandTotal += productToAdd.price;

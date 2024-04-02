@@ -14,7 +14,7 @@ export async function login(req: Request, res: Response): Promise<Response<User 
     logger.info(`Handling login request for username: ${req.body.username}`);
 
     if (!req.body.username || !req.body.password) {
-      logger.error('Insufficient Data: Username and password are required fields.');
+      logger.warn('Insufficient Data: Username and password are required fields.');
       return res
         .status(400)
         .json({ error: 'Insufficient Data', message: 'Username and password are required fields.' });

@@ -75,4 +75,10 @@ describe('validateToken', () => {
 
     expect(tokenUser).toEqual({ id: undefined });
   });
+
+  it('should throw an error if there is an error during token validation', async () => {
+    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+
+    await expect(validateToken('mockedToken')).rejects.toEqual(new Error('Error during token validation.'));
+  });
 });

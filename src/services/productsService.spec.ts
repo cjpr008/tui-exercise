@@ -65,4 +65,8 @@ describe('productExists', () => {
 
     expect(exists).toBe(false);
   });
+
+  it('should throw an error when fetching products fails', async () => {
+    await expect(fetchProducts()).rejects.toThrow('Error fetching products.');
+  });
 });

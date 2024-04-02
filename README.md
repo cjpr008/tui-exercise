@@ -24,6 +24,18 @@ To run the server:
 $ npm run dev
 ```
 
+To run tests:
+
+```
+$ npm run test
+```
+
+To run tests coverage:
+
+```
+$ npm run test:cov
+```
+
 ## Task 1 - Fetch product list
 
 - Write a GET call that will fetch all products available at https://dummyjson.com/products and return them sorted by title (A-Z).
