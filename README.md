@@ -64,7 +64,7 @@ $ npm run test:cov
     "password": "pass"
   }
   ```
-- **Description**: This endpoint logs in a user and sets the Authentication cookie.
+- **Description**: This endpoint login a user and sets the Authentication cookie.
 
 ## Task 3 - Cart
 
